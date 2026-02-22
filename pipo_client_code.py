@@ -365,7 +365,39 @@ class MultiMCP:
             {"messages": messages},
             config={"callbacks": [logger_cb]},
         )
-        save_clean_pdf(result)
+        
+        write_json(json_value = str(result), json_file_name = "pipo_client_code_response.json")
+        # print(type(response))
+        
+        agent_messages = result["messages"]
+
+        structured_messages = []
+
+        for idx, msg in enumerate(agent_messages):
+            message_dict = {
+                "index": idx,
+                "type": msg.__class__.__name__,
+                "content": msg.content,
+            }
+
+            # Tool calls (only AIMessage usually)
+            if hasattr(msg, "tool_calls") and msg.tool_calls:
+                message_dict["tool_calls"] = msg.tool_calls
+
+            # Tool name (only ToolMessage)
+            if hasattr(msg, "name") and msg.name:
+                message_dict["tool_name"] = msg.name
+
+            # Response metadata if exists
+            if hasattr(msg, "response_metadata") and msg.response_metadata:
+                message_dict["response_metadata"] = msg.response_metadata
+
+            structured_messages.append(message_dict)
+        
+        write_json(json_value = structured_messages, json_file_name = "pipo_client_code_parsed.json")
+        
+        save_to_pdf(str(structured_messages))
+        
         # result_text = (
         #     result.content if hasattr(result, "content") else
         #     result["output"] if isinstance(result, dict) and "output" in result else

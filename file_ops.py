@@ -23,7 +23,7 @@ def write_json(json_value, json_file_name):
         json_path = os.path.join(temp_dir, json_file_name)
         
         with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(json_value, f, indent=4)
+            json.dump(json_value, f, indent=4, ensure_ascii=False)
 
     except Exception as e:
         print(f"Exception in write_json function: {e}")
