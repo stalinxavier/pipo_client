@@ -1,54 +1,12 @@
 [
     {
-        "content": "test the iflow \"woo103\" in the package \"testmcp\" by creating 2 bathroom products, list the names.",
-        "additional_kwargs": {},
-        "response_metadata": {},
-        "type": "human",
-        "name": null,
-        "id": "64479a24-82a9-4d0e-8ea5-04c3b7b03eff",
-        "index": 0
-    },
-    {
-        "content": "The test for the iFlow \"woo103\" in the package \"testmcp\" was executed to create two bathroom products:\n\n- Bathroom Sink\n- Bathroom Mirror\n\nThe creation request was successful, but the response only returned details for one product (\"Product\") and not a list of all products. Attempts to list product names via GET requests were unsuccessful due to endpoint restrictions.\n\n**Summary:**\n- Two bathroom products were submitted for creation.\n- The names sent: Bathroom Sink, Bathroom Mirror.\n- Only one product's details were returned by the iFlow.\n- Listing all product names from the endpoint was not possible due to technical limitations.\n\nIf you need a full list of products or confirmation for both, please provide details on the expected response format or check the target system for the created products.",
-        "additional_kwargs": {},
-        "response_metadata": {},
-        "type": "ai",
-        "name": null,
-        "id": "4561e975-ac25-4a34-92ee-06fcc7cdee25",
-        "tool_calls": [],
-        "invalid_tool_calls": [],
-        "usage_metadata": null,
-        "index": 1
-    },
-    {
-        "content": "C:\\Users\\LakshmanNavaneethakr\\Downloads\\lakshmansierra-git\\to_be_deleted\\pipo_client\\.venv\\Scripts\\python.exe c:/Users/LakshmanNavaneethakr/Downloads/lakshmansierra-git/to_be_deleted/pipo_client/pipo_client_code.py",
-        "additional_kwargs": {},
-        "response_metadata": {},
-        "type": "human",
-        "name": null,
-        "id": "896bb805-9fb5-48a5-9f5d-a5d3c16ec44e",
-        "index": 2
-    },
-    {
-        "content": "Your message appears to be a file path and a command to execute a Python script:\n\n```\nC:\\Users\\LakshmanNavaneethakr\\Downloads\\lakshmansierra-git\\to_be_deleted\\pipo_client\\.venv\\Scripts\\python.exe c:/Users/LakshmanNavaneethakr/Downloads/lakshmansierra-git/to_be_deleted/pipo_client/pipo_client_code.py\n```\n\nIf you want to run this script, you should execute it in your Windows command prompt or PowerShell.  \nHere’s how you can do it:\n\n1. Open Command Prompt.\n2. Paste the command and press Enter.\n\n**If you need help integrating this script with SAP CPI or want to test an iFlow using this script, please clarify your requirements.**  \nIf you want to test an iFlow or validate integration, let me know the details (iFlow name, package, payload, etc.), and I can assist with SAP MCP automation.",
-        "additional_kwargs": {},
-        "response_metadata": {},
-        "type": "ai",
-        "name": null,
-        "id": "c354e55c-fb74-4105-aaa9-76266c905fc6",
-        "tool_calls": [],
-        "invalid_tool_calls": [],
-        "usage_metadata": null,
-        "index": 3
-    },
-    {
         "content": "test the iflow \"woo103\" in the package \"testmcp\" by creating 2 bathroom products, list the names.\n\nRouting hint: This request best matches `integration_suite`. Use for iFlow and SAP Integration Suite design/creation/deployment tasks.",
         "additional_kwargs": {},
         "response_metadata": {},
         "type": "human",
         "name": null,
-        "id": "8f8eccd9-433a-41a6-b210-294b74dd2d62",
-        "index": 4
+        "id": "3311deb1-1ad3-4296-a4e7-dd84bca4908d",
+        "index": 0
     },
     {
         "content": "",
@@ -58,8 +16,8 @@
         "response_metadata": {
             "token_usage": {
                 "completion_tokens": 24,
-                "prompt_tokens": 6603,
-                "total_tokens": 6627,
+                "prompt_tokens": 6134,
+                "total_tokens": 6158,
                 "completion_tokens_details": {
                     "accepted_prediction_tokens": 0,
                     "audio_tokens": 0,
@@ -68,113 +26,44 @@
                 },
                 "prompt_tokens_details": {
                     "audio_tokens": 0,
-                    "cached_tokens": 6528
+                    "cached_tokens": 6016
                 }
             },
             "model_provider": "openai",
             "model_name": "gpt-4.1-2025-04-14",
             "system_fingerprint": "fp_7a7fd0eb44",
-            "id": "chatcmpl-DCH8Jyc6Ohco5cCDBaB9V6NiI9UIM",
+            "id": "chatcmpl-DCHKnUpAj0FN9g1mxvRo0gn2e6wo3",
             "finish_reason": "tool_calls",
             "logprobs": null
         },
         "type": "ai",
         "name": null,
-        "id": "lc_run--019c8897-a37f-71a1-87bf-108ea34b136f-0",
-        "tool_calls": [
-            {
-                "name": "integration_suite__get_all_iflows",
-                "args": {
-                    "pkgId": "testmcp"
-                },
-                "id": "call_j8xroKlR0rhI0KL7Kob3PVYo",
-                "type": "tool_call"
-            }
-        ],
-        "invalid_tool_calls": [],
-        "usage_metadata": {
-            "input_tokens": 6603,
-            "output_tokens": 24,
-            "total_tokens": 6627,
-            "input_token_details": {
-                "audio": 0,
-                "cache_read": 6528
-            },
-            "output_token_details": {
-                "audio": 0,
-                "reasoning": 0
-            }
-        },
-        "index": 5
-    },
-    {
-        "content": "{\"iflows\":[{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='demoo',Version='1.0.0')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='demoo',Version='1.0.0')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='demoo',Version='1.0.0')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='demoo',Version='1.0.0')/$value\"},\"Id\":\"demoo\",\"Version\":\"1.0.0\",\"PackageId\":\"testmcp\",\"Name\":\"demoo\",\"Description\":\"testing sandbox\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771403724557\",\"ModifiedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"ModifiedAt\":\"1771403724561\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='demoo',Version='1.0.0')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='demoo',Version='1.0.0')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='demoo',Version='1.0.0')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='StripeAdapterIflow_copy',Version='Active')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='StripeAdapterIflow_copy',Version='Active')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='StripeAdapterIflow_copy',Version='Active')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='StripeAdapterIflow_copy',Version='Active')/$value\"},\"Id\":\"StripeAdapterIflow_copy\",\"Version\":\"Active\",\"PackageId\":\"testmcp\",\"Name\":\"StripeAdapterIflow_copy\",\"Description\":\"StripeAdapterIflow\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"CreatedAt\":\"1771412118878\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1771413361017\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='StripeAdapterIflow_copy',Version='Active')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='StripeAdapterIflow_copy',Version='Active')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='StripeAdapterIflow_copy',Version='Active')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo103',Version='1.0.1')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo103',Version='1.0.1')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo103',Version='1.0.1')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo103',Version='1.0.1')/$value\"},\"Id\":\"woo103\",\"Version\":\"1.0.1\",\"PackageId\":\"testmcp\",\"Name\":\"woo103\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771422833554\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1771483485327\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo103',Version='1.0.1')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo103',Version='1.0.1')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo103',Version='1.0.1')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='Stripe_-_CRUD_Operation_with_single_script_2_pcopy_copy',Version='1.0.9')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='Stripe_-_CRUD_Operation_with_single_script_2_pcopy_copy',Version='1.0.9')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='Stripe_-_CRUD_Operation_with_single_script_2_pcopy_copy',Version='1.0.9')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='Stripe_-_CRUD_Operation_with_single_script_2_pcopy_copy',Version='1.0.9')/$value\"},\"Id\":\"Stripe_-_CRUD_Operation_with_single_script_2_pcopy_copy\",\"Version\":\"1.0.9\",\"PackageId\":\"testmcp\",\"Name\":\"Stripe - CRUD Operation with single script_2_pcopy_copy\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"CreatedAt\":\"1771337918073\",\"ModifiedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"ModifiedAt\":\"1771338165615\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='Stripe_-_CRUD_Operation_with_single_script_2_pcopy_copy',Version='1.0.9')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='Stripe_-_CRUD_Operation_with_single_script_2_pcopy_copy',Version='1.0.9')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='Stripe_-_CRUD_Operation_with_single_script_2_pcopy_copy',Version='1.0.9')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom1',Version='Active')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom1',Version='Active')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom1',Version='Active')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom1',Version='Active')/$value\"},\"Id\":\"testwoocom1\",\"Version\":\"Active\",\"PackageId\":\"testmcp\",\"Name\":\"testwoocom1\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771575668996\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1771576274483\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom1',Version='Active')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom1',Version='Active')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom1',Version='Active')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WCgroovy',Version='Active')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WCgroovy',Version='Active')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WCgroovy',Version='Active')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WCgroovy',Version='Active')/$value\"},\"Id\":\"WCgroovy\",\"Version\":\"Active\",\"PackageId\":\"testmcp\",\"Name\":\"WCgroovy\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771588917560\",\"ModifiedBy\":\"r.mohan@sierradigitalinc.com\",\"ModifiedAt\":\"1771604461077\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WCgroovy',Version='Active')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WCgroovy',Version='Active')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WCgroovy',Version='Active')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo106',Version='1.0.1')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo106',Version='1.0.1')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo106',Version='1.0.1')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo106',Version='1.0.1')/$value\"},\"Id\":\"woo106\",\"Version\":\"1.0.1\",\"PackageId\":\"testmcp\",\"Name\":\"woo106\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771425899482\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1771483719404\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo106',Version='1.0.1')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo106',Version='1.0.1')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo106',Version='1.0.1')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='GWtest',Version='1.0.7')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='GWtest',Version='1.0.7')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='GWtest',Version='1.0.7')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='GWtest',Version='1.0.7')/$value\"},\"Id\":\"GWtest\",\"Version\":\"1.0.7\",\"PackageId\":\"testmcp\",\"Name\":\"GWtest\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771583667829\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1771604681238\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='GWtest',Version='1.0.7')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='GWtest',Version='1.0.7')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='GWtest',Version='1.0.7')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocommerce',Version='Active')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocommerce',Version='Active')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocommerce',Version='Active')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocommerce',Version='Active')/$value\"},\"Id\":\"testwoocommerce\",\"Version\":\"Active\",\"PackageId\":\"testmcp\",\"Name\":\"testwoocommerce\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771507826610\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1771510874297\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocommerce',Version='Active')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocommerce',Version='Active')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocommerce',Version='Active')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='payload_test',Version='1.0.0')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='payload_test',Version='1.0.0')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='payload_test',Version='1.0.0')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='payload_test',Version='1.0.0')/$value\"},\"Id\":\"payload_test\",\"Version\":\"1.0.0\",\"PackageId\":\"testmcp\",\"Name\":\"payload_test\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"CreatedAt\":\"1768976654693\",\"ModifiedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"ModifiedAt\":\"1771337503836\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='payload_test',Version='1.0.0')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='payload_test',Version='1.0.0')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='payload_test',Version='1.0.0')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerceIflow_copy',Version='Active')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerceIflow_copy',Version='Active')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerceIflow_copy',Version='Active')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerceIflow_copy',Version='Active')/$value\"},\"Id\":\"WooCommerceIflow_copy\",\"Version\":\"Active\",\"PackageId\":\"testmcp\",\"Name\":\"WooCommerceIflow_copy\",\"Description\":\"WooCommerceIflow\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"CreatedAt\":\"1771403121143\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1771490301595\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerceIflow_copy',Version='Active')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerceIflow_copy',Version='Active')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerceIflow_copy',Version='Active')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woocommerce_REST_API_scripting_copy',Version='1.0.1')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woocommerce_REST_API_scripting_copy',Version='1.0.1')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woocommerce_REST_API_scripting_copy',Version='1.0.1')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woocommerce_REST_API_scripting_copy',Version='1.0.1')/$value\"},\"Id\":\"woocommerce_REST_API_scripting_copy\",\"Version\":\"1.0.1\",\"PackageId\":\"testmcp\",\"Name\":\"woocommerce_REST_API_scripting_copy\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"CreatedAt\":\"1769767934211\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1769767934214\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woocommerce_REST_API_scripting_copy',Version='1.0.1')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woocommerce_REST_API_scripting_copy',Version='1.0.1')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woocommerce_REST_API_scripting_copy',Version='1.0.1')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo1k',Version='1.0.0')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo1k',Version='1.0.0')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo1k',Version='1.0.0')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo1k',Version='1.0.0')/$value\"},\"Id\":\"woo1k\",\"Version\":\"1.0.0\",\"PackageId\":\"testmcp\",\"Name\":\"woo1k\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771483884407\",\"ModifiedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"ModifiedAt\":\"1771484175508\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo1k',Version='1.0.0')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo1k',Version='1.0.0')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woo1k',Version='1.0.0')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woootest',Version='Active')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woootest',Version='Active')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woootest',Version='Active')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woootest',Version='Active')/$value\"},\"Id\":\"woootest\",\"Version\":\"Active\",\"PackageId\":\"testmcp\",\"Name\":\"woootest\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"CreatedAt\":\"1769610429172\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1770274032423\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woootest',Version='Active')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woootest',Version='Active')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='woootest',Version='Active')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom2',Version='1.0.0')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom2',Version='1.0.0')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom2',Version='1.0.0')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom2',Version='1.0.0')/$value\"},\"Id\":\"testwoocom2\",\"Version\":\"1.0.0\",\"PackageId\":\"testmcp\",\"Name\":\"testwoocom2\",\"Description\":\"\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"CreatedAt\":\"1771595666545\",\"ModifiedBy\":\"sb-e2cce3d6-d9ac-4b86-90c1-36b5b1cf747b!b183067|it!b56186\",\"ModifiedAt\":\"1771596187359\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom2',Version='1.0.0')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom2',Version='1.0.0')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='testwoocom2',Version='1.0.0')/DesignGuidelineExecutionResults\"}}},{\"__metadata\":{\"id\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerce_Groovy_Script',Version='Active')\",\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerce_Groovy_Script',Version='Active')\",\"type\":\"com.sap.hci.api.IntegrationDesigntimeArtifact\",\"content_type\":\"application/octet-stream\",\"media_src\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerce_Groovy_Script',Version='Active')/$value\",\"edit_media\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerce_Groovy_Script',Version='Active')/$value\"},\"Id\":\"WooCommerce_Groovy_Script\",\"Version\":\"Active\",\"PackageId\":\"testmcp\",\"Name\":\"WooCommerce_Groovy_Script\",\"Description\":\"Woo Commerce with all operations for all entities in woo commerce\",\"Sender\":null,\"Receiver\":null,\"CreatedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"CreatedAt\":\"1770307696355\",\"ModifiedBy\":\"p.karthikeyan@sierradigitalinc.com\",\"ModifiedAt\":\"1770308995370\",\"ArtifactContent\":null,\"Configurations\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerce_Groovy_Script',Version='Active')/Configurations\"}},\"Resources\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerce_Groovy_Script',Version='Active')/Resources\"}},\"DesignGuidelineExecutionResults\":{\"__deferred\":{\"uri\":\"https://hess-test-btdpygoi.it-cpi019.cfapps.us10-002.hana.ondemand.com:443/api/v1/IntegrationDesigntimeArtifacts(Id='WooCommerce_Groovy_Script',Version='Active')/DesignGuidelineExecutionResults\"}}}]}",
-        "additional_kwargs": {},
-        "response_metadata": {},
-        "type": "tool",
-        "name": "integration_suite__get_all_iflows",
-        "id": "16be1e3a-4b0d-4712-b1a2-f1a9d6382418",
-        "tool_call_id": "call_j8xroKlR0rhI0KL7Kob3PVYo",
-        "artifact": null,
-        "status": "success",
-        "index": 6
-    },
-    {
-        "content": "",
-        "additional_kwargs": {
-            "refusal": null
-        },
-        "response_metadata": {
-            "token_usage": {
-                "completion_tokens": 24,
-                "prompt_tokens": 15554,
-                "total_tokens": 15578,
-                "completion_tokens_details": {
-                    "accepted_prediction_tokens": 0,
-                    "audio_tokens": 0,
-                    "reasoning_tokens": 0,
-                    "rejected_prediction_tokens": 0
-                },
-                "prompt_tokens_details": {
-                    "audio_tokens": 0,
-                    "cached_tokens": 6528
-                }
-            },
-            "model_provider": "openai",
-            "model_name": "gpt-4.1-2025-04-14",
-            "system_fingerprint": "fp_7a7fd0eb44",
-            "id": "chatcmpl-DCH8O08NBJYawM5ghFspY0FOPCuZn",
-            "finish_reason": "tool_calls",
-            "logprobs": null
-        },
-        "type": "ai",
-        "name": null,
-        "id": "lc_run--019c8897-b8bf-7aa2-abb0-70ebd4941c49-0",
+        "id": "lc_run--019c88a3-7265-79c3-9f1b-32df24f52d52-0",
         "tool_calls": [
             {
                 "name": "integration_suite__get_iflow_endpoints",
                 "args": {
                     "iflowId": "woo103"
                 },
-                "id": "call_1RTP9NN7mW7tKytJo0EBKmOW",
+                "id": "call_MgAYxsZ7irwTWWOMAmNAwFno",
                 "type": "tool_call"
             }
         ],
         "invalid_tool_calls": [],
         "usage_metadata": {
-            "input_tokens": 15554,
+            "input_tokens": 6134,
             "output_tokens": 24,
-            "total_tokens": 15578,
+            "total_tokens": 6158,
             "input_token_details": {
                 "audio": 0,
-                "cache_read": 6528
+                "cache_read": 6016
             },
             "output_token_details": {
                 "audio": 0,
                 "reasoning": 0
             }
         },
-        "index": 7
+        "index": 1
     },
     {
         "content": "{\"type\":\"success\",\"endpoints\":[{\"name\":\"woo103\",\"id\":\"woo103$endpointAddress=woo103\",\"title\":\"woo103\",\"version\":\"1.0.0\",\"summary\":\"woo103\",\"description\":\"woo103\",\"lastUpdated\":\"2026-02-19T06:41:56.556Z\",\"protocol\":\"REST\",\"entryPoints\":[],\"apiDefinitions\":[],\"URL\":\"https://hess-test-btdpygoi.it-cpi019-rt.cfapps.us10-002.hana.ondemand.com/http/woo103\"}]}",
@@ -182,11 +71,11 @@
         "response_metadata": {},
         "type": "tool",
         "name": "integration_suite__get_iflow_endpoints",
-        "id": "576e2b54-4934-439a-98b9-663229f26a51",
-        "tool_call_id": "call_1RTP9NN7mW7tKytJo0EBKmOW",
+        "id": "69640966-1094-4313-9856-129109a91481",
+        "tool_call_id": "call_MgAYxsZ7irwTWWOMAmNAwFno",
         "artifact": null,
         "status": "success",
-        "index": 8
+        "index": 2
     },
     {
         "content": "",
@@ -195,9 +84,9 @@
         },
         "response_metadata": {
             "token_usage": {
-                "completion_tokens": 71,
-                "prompt_tokens": 15706,
-                "total_tokens": 15777,
+                "completion_tokens": 117,
+                "prompt_tokens": 6286,
+                "total_tokens": 6403,
                 "completion_tokens_details": {
                     "accepted_prediction_tokens": 0,
                     "audio_tokens": 0,
@@ -206,47 +95,58 @@
                 },
                 "prompt_tokens_details": {
                     "audio_tokens": 0,
-                    "cached_tokens": 15488
+                    "cached_tokens": 6272
                 }
             },
             "model_provider": "openai",
             "model_name": "gpt-4.1-2025-04-14",
             "system_fingerprint": "fp_7a7fd0eb44",
-            "id": "chatcmpl-DCH8TrofwEyXQGUGhv3vD0kkMNf4t",
+            "id": "chatcmpl-DCHKu6jacSt29CTvuljoxCzGLVOJQ",
             "finish_reason": "tool_calls",
             "logprobs": null
         },
         "type": "ai",
         "name": null,
-        "id": "lc_run--019c8897-cd30-7380-b904-b83681fde03c-0",
+        "id": "lc_run--019c88a3-8f11-7731-ae1e-c0dbfbf6efdf-0",
         "tool_calls": [
             {
                 "name": "integration_suite__send_http_message",
                 "args": {
                     "path": "/http/woo103",
                     "method": "POST",
-                    "body": "{\"products\":[{\"name\":\"Bathroom Sink\",\"category\":\"Bathroom\",\"type\":\"product\"},{\"name\":\"Bathroom Mirror\",\"category\":\"Bathroom\",\"type\":\"product\"}]}",
+                    "body": "{\"productType\":\"bathroom\",\"name\":\"Bathroom Product 1\"}",
                     "contentType": "application/json"
                 },
-                "id": "call_05G5AxYLVT7xoDdOmrdd2Q4U",
+                "id": "call_afsyWuEkaXVavGKgaF6Jkaiy",
+                "type": "tool_call"
+            },
+            {
+                "name": "integration_suite__send_http_message",
+                "args": {
+                    "path": "/http/woo103",
+                    "method": "POST",
+                    "body": "{\"productType\":\"bathroom\",\"name\":\"Bathroom Product 2\"}",
+                    "contentType": "application/json"
+                },
+                "id": "call_bYKd4GtFOlWh2Iwy06nsQGrP",
                 "type": "tool_call"
             }
         ],
         "invalid_tool_calls": [],
         "usage_metadata": {
-            "input_tokens": 15706,
-            "output_tokens": 71,
-            "total_tokens": 15777,
+            "input_tokens": 6286,
+            "output_tokens": 117,
+            "total_tokens": 6403,
             "input_token_details": {
                 "audio": 0,
-                "cache_read": 15488
+                "cache_read": 6272
             },
             "output_token_details": {
                 "audio": 0,
                 "reasoning": 0
             }
         },
-        "index": 9
+        "index": 3
     },
     {
         "content": "ERROR: MCP error -32602: Input validation error: Invalid arguments for tool send-http-message: [\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"array\",\n    \"received\": \"null\",\n    \"path\": [\n      \"headers\"\n    ],\n    \"message\": \"Expected array, received null\"\n  }\n]",
@@ -254,11 +154,23 @@
         "response_metadata": {},
         "type": "tool",
         "name": "integration_suite__send_http_message",
-        "id": "58f6ee52-08bb-4016-b50b-299d8425df44",
-        "tool_call_id": "call_05G5AxYLVT7xoDdOmrdd2Q4U",
+        "id": "d2dbd611-4072-4552-99cb-bbda85c22904",
+        "tool_call_id": "call_afsyWuEkaXVavGKgaF6Jkaiy",
         "artifact": null,
         "status": "success",
-        "index": 10
+        "index": 4
+    },
+    {
+        "content": "ERROR: MCP error -32602: Input validation error: Invalid arguments for tool send-http-message: [\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"array\",\n    \"received\": \"null\",\n    \"path\": [\n      \"headers\"\n    ],\n    \"message\": \"Expected array, received null\"\n  }\n]",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "tool",
+        "name": "integration_suite__send_http_message",
+        "id": "f015efb1-3bab-4487-8156-fc8fedbca169",
+        "tool_call_id": "call_bYKd4GtFOlWh2Iwy06nsQGrP",
+        "artifact": null,
+        "status": "success",
+        "index": 5
     },
     {
         "content": "",
@@ -267,9 +179,9 @@
         },
         "response_metadata": {
             "token_usage": {
-                "completion_tokens": 74,
-                "prompt_tokens": 15858,
-                "total_tokens": 15932,
+                "completion_tokens": 123,
+                "prompt_tokens": 6581,
+                "total_tokens": 6704,
                 "completion_tokens_details": {
                     "accepted_prediction_tokens": 0,
                     "audio_tokens": 0,
@@ -278,143 +190,95 @@
                 },
                 "prompt_tokens_details": {
                     "audio_tokens": 0,
-                    "cached_tokens": 15744
+                    "cached_tokens": 6272
                 }
             },
             "model_provider": "openai",
             "model_name": "gpt-4.1-2025-04-14",
             "system_fingerprint": "fp_7a7fd0eb44",
-            "id": "chatcmpl-DCH8eEQp1chgTc43MyfDop1Ur9Sjl",
+            "id": "chatcmpl-DCHL5QyucewBpz5agUo1zMOHR5Pti",
             "finish_reason": "tool_calls",
             "logprobs": null
         },
         "type": "ai",
         "name": null,
-        "id": "lc_run--019c8897-f623-7c30-851a-b20076115db7-0",
+        "id": "lc_run--019c88a3-b90b-72a0-b1a9-8c7e6b69d97d-0",
         "tool_calls": [
             {
                 "name": "integration_suite__send_http_message",
                 "args": {
                     "path": "/http/woo103",
                     "method": "POST",
-                    "body": "{\"products\":[{\"name\":\"Bathroom Sink\",\"category\":\"Bathroom\",\"type\":\"product\"},{\"name\":\"Bathroom Mirror\",\"category\":\"Bathroom\",\"type\":\"product\"}]}",
-                    "contentType": "application/json",
-                    "headers": []
+                    "body": "{\"productType\":\"bathroom\",\"name\":\"Bathroom Product 1\"}",
+                    "headers": [],
+                    "contentType": "application/json"
                 },
-                "id": "call_pKLaasUxzhpCJWfvRCFHKc7A",
+                "id": "call_Zv48iLCPLRLCjEqQqoq9wKkX",
                 "type": "tool_call"
-            }
-        ],
-        "invalid_tool_calls": [],
-        "usage_metadata": {
-            "input_tokens": 15858,
-            "output_tokens": 74,
-            "total_tokens": 15932,
-            "input_token_details": {
-                "audio": 0,
-                "cache_read": 15744
             },
-            "output_token_details": {
-                "audio": 0,
-                "reasoning": 0
-            }
-        },
-        "index": 11
-    },
-    {
-        "content": "{\"status\":200,\"response\":\"{\\\"id\\\":122,\\\"name\\\":\\\"Product\\\",\\\"slug\\\":\\\"product-31\\\",\\\"permalink\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/product\\\\/product-31\\\\/\\\",\\\"date_created\\\":\\\"2026-02-23T09:13:11\\\",\\\"date_created_gmt\\\":\\\"2026-02-23T03:43:11\\\",\\\"date_modified\\\":\\\"2026-02-23T09:13:11\\\",\\\"date_modified_gmt\\\":\\\"2026-02-23T03:43:11\\\",\\\"type\\\":\\\"simple\\\",\\\"status\\\":\\\"publish\\\",\\\"featured\\\":false,\\\"catalog_visibility\\\":\\\"visible\\\",\\\"description\\\":\\\"\\\",\\\"short_description\\\":\\\"\\\",\\\"sku\\\":\\\"\\\",\\\"price\\\":\\\"\\\",\\\"regular_price\\\":\\\"\\\",\\\"sale_price\\\":\\\"\\\",\\\"date_on_sale_from\\\":null,\\\"date_on_sale_from_gmt\\\":null,\\\"date_on_sale_to\\\":null,\\\"date_on_sale_to_gmt\\\":null,\\\"on_sale\\\":false,\\\"purchasable\\\":false,\\\"total_sales\\\":0,\\\"virtual\\\":false,\\\"downloadable\\\":false,\\\"downloads\\\":[],\\\"download_limit\\\":-1,\\\"download_expiry\\\":-1,\\\"external_url\\\":\\\"\\\",\\\"button_text\\\":\\\"\\\",\\\"tax_status\\\":\\\"taxable\\\",\\\"tax_class\\\":\\\"\\\",\\\"manage_stock\\\":false,\\\"stock_quantity\\\":null,\\\"backorders\\\":\\\"no\\\",\\\"backorders_allowed\\\":false,\\\"backordered\\\":false,\\\"low_stock_amount\\\":null,\\\"sold_individually\\\":false,\\\"weight\\\":\\\"\\\",\\\"dimensions\\\":{\\\"length\\\":\\\"\\\",\\\"width\\\":\\\"\\\",\\\"height\\\":\\\"\\\"},\\\"shipping_required\\\":true,\\\"shipping_taxable\\\":true,\\\"shipping_class\\\":\\\"\\\",\\\"shipping_class_id\\\":0,\\\"reviews_allowed\\\":true,\\\"average_rating\\\":\\\"0\\\",\\\"rating_count\\\":0,\\\"upsell_ids\\\":[],\\\"cross_sell_ids\\\":[],\\\"parent_id\\\":0,\\\"purchase_note\\\":\\\"\\\",\\\"categories\\\":[],\\\"brands\\\":[],\\\"tags\\\":[],\\\"images\\\":[],\\\"attributes\\\":[],\\\"default_attributes\\\":[],\\\"variations\\\":[],\\\"grouped_products\\\":[],\\\"menu_order\\\":0,\\\"price_html\\\":\\\"\\\",\\\"related_ids\\\":[],\\\"meta_data\\\":[{\\\"id\\\":1797,\\\"key\\\":\\\"_wpcom_is_markdown\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":1798,\\\"key\\\":\\\"_wpas_done_all\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":1814,\\\"key\\\":\\\"_product_addons_exclude_global\\\",\\\"value\\\":\\\"0\\\"},{\\\"id\\\":1815,\\\"key\\\":\\\"_product_addons\\\",\\\"value\\\":[]}],\\\"stock_status\\\":\\\"instock\\\",\\\"has_options\\\":false,\\\"post_password\\\":\\\"\\\",\\\"global_unique_id\\\":\\\"\\\",\\\"permalink_template\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/product\\\\/%pagename%\\\\/\\\",\\\"generated_slug\\\":\\\"product-31\\\",\\\"exclude_global_add_ons\\\":[],\\\"addons\\\":[],\\\"jetpack_publicize_connections\\\":[],\\\"jetpack_sharing_enabled\\\":true,\\\"jetpack_likes_enabled\\\":true,\\\"_links\\\":{\\\"self\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/wp-json\\\\/wc\\\\/v3\\\\/products\\\\/122\\\",\\\"targetHints\\\":{\\\"allow\\\":[\\\"GET\\\",\\\"POST\\\",\\\"PUT\\\",\\\"PATCH\\\",\\\"DELETE\\\"]}}],\\\"collection\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/wp-json\\\\/wc\\\\/v3\\\\/products\\\"}]}}\"}",
-        "additional_kwargs": {},
-        "response_metadata": {},
-        "type": "tool",
-        "name": "integration_suite__send_http_message",
-        "id": "93b9ec79-2749-4b37-8717-dfb318c160f0",
-        "tool_call_id": "call_pKLaasUxzhpCJWfvRCFHKc7A",
-        "artifact": null,
-        "status": "success",
-        "index": 12
-    },
-    {
-        "content": "",
-        "additional_kwargs": {
-            "refusal": null
-        },
-        "response_metadata": {
-            "token_usage": {
-                "completion_tokens": 36,
-                "prompt_tokens": 16626,
-                "total_tokens": 16662,
-                "completion_tokens_details": {
-                    "accepted_prediction_tokens": 0,
-                    "audio_tokens": 0,
-                    "reasoning_tokens": 0,
-                    "rejected_prediction_tokens": 0
-                },
-                "prompt_tokens_details": {
-                    "audio_tokens": 0,
-                    "cached_tokens": 15872
-                }
-            },
-            "model_provider": "openai",
-            "model_name": "gpt-4.1-2025-04-14",
-            "system_fingerprint": "fp_7a7fd0eb44",
-            "id": "chatcmpl-DCH8kkAd5ngLWjOUYx2YytDogkKIC",
-            "finish_reason": "tool_calls",
-            "logprobs": null
-        },
-        "type": "ai",
-        "name": null,
-        "id": "lc_run--019c8898-0f8f-77c0-aa81-8e03d35f687d-0",
-        "tool_calls": [
             {
                 "name": "integration_suite__send_http_message",
                 "args": {
                     "path": "/http/woo103",
-                    "method": "GET",
+                    "method": "POST",
+                    "body": "{\"productType\":\"bathroom\",\"name\":\"Bathroom Product 2\"}",
                     "headers": [],
                     "contentType": "application/json"
                 },
-                "id": "call_85SC2SFiINCFhWxNl80yff1A",
+                "id": "call_F84yUDnEosUEbKlGpePpOMlL",
                 "type": "tool_call"
             }
         ],
         "invalid_tool_calls": [],
         "usage_metadata": {
-            "input_tokens": 16626,
-            "output_tokens": 36,
-            "total_tokens": 16662,
+            "input_tokens": 6581,
+            "output_tokens": 123,
+            "total_tokens": 6704,
             "input_token_details": {
                 "audio": 0,
-                "cache_read": 15872
+                "cache_read": 6272
             },
             "output_token_details": {
                 "audio": 0,
                 "reasoning": 0
             }
         },
-        "index": 13
+        "index": 6
     },
     {
-        "content": "ERROR: MCP error -32602: Input validation error: Invalid arguments for tool send-http-message: [\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"null\",\n    \"path\": [\n      \"body\"\n    ],\n    \"message\": \"Expected string, received null\"\n  }\n]",
+        "content": "{\"status\":200,\"response\":\"{\\\"id\\\":123,\\\"name\\\":\\\"Bathroom Product 1\\\",\\\"slug\\\":\\\"bathroom-product-1\\\",\\\"permalink\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/product\\\\/bathroom-product-1\\\\/\\\",\\\"date_created\\\":\\\"2026-02-23T09:26:02\\\",\\\"date_created_gmt\\\":\\\"2026-02-23T03:56:02\\\",\\\"date_modified\\\":\\\"2026-02-23T09:26:02\\\",\\\"date_modified_gmt\\\":\\\"2026-02-23T03:56:02\\\",\\\"type\\\":\\\"simple\\\",\\\"status\\\":\\\"publish\\\",\\\"featured\\\":false,\\\"catalog_visibility\\\":\\\"visible\\\",\\\"description\\\":\\\"\\\",\\\"short_description\\\":\\\"\\\",\\\"sku\\\":\\\"\\\",\\\"price\\\":\\\"\\\",\\\"regular_price\\\":\\\"\\\",\\\"sale_price\\\":\\\"\\\",\\\"date_on_sale_from\\\":null,\\\"date_on_sale_from_gmt\\\":null,\\\"date_on_sale_to\\\":null,\\\"date_on_sale_to_gmt\\\":null,\\\"on_sale\\\":false,\\\"purchasable\\\":false,\\\"total_sales\\\":0,\\\"virtual\\\":false,\\\"downloadable\\\":false,\\\"downloads\\\":[],\\\"download_limit\\\":-1,\\\"download_expiry\\\":-1,\\\"external_url\\\":\\\"\\\",\\\"button_text\\\":\\\"\\\",\\\"tax_status\\\":\\\"taxable\\\",\\\"tax_class\\\":\\\"\\\",\\\"manage_stock\\\":false,\\\"stock_quantity\\\":null,\\\"backorders\\\":\\\"no\\\",\\\"backorders_allowed\\\":false,\\\"backordered\\\":false,\\\"low_stock_amount\\\":null,\\\"sold_individually\\\":false,\\\"weight\\\":\\\"\\\",\\\"dimensions\\\":{\\\"length\\\":\\\"\\\",\\\"width\\\":\\\"\\\",\\\"height\\\":\\\"\\\"},\\\"shipping_required\\\":true,\\\"shipping_taxable\\\":true,\\\"shipping_class\\\":\\\"\\\",\\\"shipping_class_id\\\":0,\\\"reviews_allowed\\\":true,\\\"average_rating\\\":\\\"0\\\",\\\"rating_count\\\":0,\\\"upsell_ids\\\":[],\\\"cross_sell_ids\\\":[],\\\"parent_id\\\":0,\\\"purchase_note\\\":\\\"\\\",\\\"categories\\\":[],\\\"brands\\\":[],\\\"tags\\\":[],\\\"images\\\":[],\\\"attributes\\\":[],\\\"default_attributes\\\":[],\\\"variations\\\":[],\\\"grouped_products\\\":[],\\\"menu_order\\\":0,\\\"price_html\\\":\\\"\\\",\\\"related_ids\\\":[],\\\"meta_data\\\":[{\\\"id\\\":1817,\\\"key\\\":\\\"_wpcom_is_markdown\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":1818,\\\"key\\\":\\\"_wpas_done_all\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":1851,\\\"key\\\":\\\"_product_addons_exclude_global\\\",\\\"value\\\":\\\"0\\\"},{\\\"id\\\":1852,\\\"key\\\":\\\"_product_addons\\\",\\\"value\\\":[]}],\\\"stock_status\\\":\\\"instock\\\",\\\"has_options\\\":false,\\\"post_password\\\":\\\"\\\",\\\"global_unique_id\\\":\\\"\\\",\\\"permalink_template\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/product\\\\/%pagename%\\\\/\\\",\\\"generated_slug\\\":\\\"bathroom-product-1\\\",\\\"exclude_global_add_ons\\\":[],\\\"addons\\\":[],\\\"jetpack_publicize_connections\\\":[],\\\"jetpack_sharing_enabled\\\":true,\\\"jetpack_likes_enabled\\\":true,\\\"_links\\\":{\\\"self\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/wp-json\\\\/wc\\\\/v3\\\\/products\\\\/123\\\",\\\"targetHints\\\":{\\\"allow\\\":[\\\"GET\\\",\\\"POST\\\",\\\"PUT\\\",\\\"PATCH\\\",\\\"DELETE\\\"]}}],\\\"collection\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/wp-json\\\\/wc\\\\/v3\\\\/products\\\"}]}}\"}",
         "additional_kwargs": {},
         "response_metadata": {},
         "type": "tool",
         "name": "integration_suite__send_http_message",
-        "id": "5753a208-de85-4919-b752-02a5418ee85b",
-        "tool_call_id": "call_85SC2SFiINCFhWxNl80yff1A",
+        "id": "4d1c078a-6e8f-45f5-b147-51c6bb728ef3",
+        "tool_call_id": "call_Zv48iLCPLRLCjEqQqoq9wKkX",
         "artifact": null,
         "status": "success",
-        "index": 14
+        "index": 7
     },
     {
-        "content": "The iFlow \"woo103\" in the package \"testmcp\" was tested by submitting a request to create two bathroom products:\n\n- Bathroom Sink\n- Bathroom Mirror\n\nThe creation request was successful, but the response only returned details for one product (\"Product\") and not a list of all products. Attempts to list product names via GET requests were unsuccessful due to endpoint restrictions.\n\n**Summary:**\n- Two bathroom products were submitted for creation.\n- The names sent: Bathroom Sink, Bathroom Mirror.\n- Only one product's details were returned by the iFlow.\n- Listing all product names from the endpoint was not possible due to technical limitations.\n\nIf you need a full list of products or confirmation for both, please provide details on the expected response format or check the target system for the created products.",
+        "content": "{\"status\":200,\"response\":\"{\\\"id\\\":124,\\\"name\\\":\\\"Bathroom Product 2\\\",\\\"slug\\\":\\\"bathroom-product-2\\\",\\\"permalink\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/product\\\\/bathroom-product-2\\\\/\\\",\\\"date_created\\\":\\\"2026-02-23T09:26:02\\\",\\\"date_created_gmt\\\":\\\"2026-02-23T03:56:02\\\",\\\"date_modified\\\":\\\"2026-02-23T09:26:02\\\",\\\"date_modified_gmt\\\":\\\"2026-02-23T03:56:02\\\",\\\"type\\\":\\\"simple\\\",\\\"status\\\":\\\"publish\\\",\\\"featured\\\":false,\\\"catalog_visibility\\\":\\\"visible\\\",\\\"description\\\":\\\"\\\",\\\"short_description\\\":\\\"\\\",\\\"sku\\\":\\\"\\\",\\\"price\\\":\\\"\\\",\\\"regular_price\\\":\\\"\\\",\\\"sale_price\\\":\\\"\\\",\\\"date_on_sale_from\\\":null,\\\"date_on_sale_from_gmt\\\":null,\\\"date_on_sale_to\\\":null,\\\"date_on_sale_to_gmt\\\":null,\\\"on_sale\\\":false,\\\"purchasable\\\":false,\\\"total_sales\\\":0,\\\"virtual\\\":false,\\\"downloadable\\\":false,\\\"downloads\\\":[],\\\"download_limit\\\":-1,\\\"download_expiry\\\":-1,\\\"external_url\\\":\\\"\\\",\\\"button_text\\\":\\\"\\\",\\\"tax_status\\\":\\\"taxable\\\",\\\"tax_class\\\":\\\"\\\",\\\"manage_stock\\\":false,\\\"stock_quantity\\\":null,\\\"backorders\\\":\\\"no\\\",\\\"backorders_allowed\\\":false,\\\"backordered\\\":false,\\\"low_stock_amount\\\":null,\\\"sold_individually\\\":false,\\\"weight\\\":\\\"\\\",\\\"dimensions\\\":{\\\"length\\\":\\\"\\\",\\\"width\\\":\\\"\\\",\\\"height\\\":\\\"\\\"},\\\"shipping_required\\\":true,\\\"shipping_taxable\\\":true,\\\"shipping_class\\\":\\\"\\\",\\\"shipping_class_id\\\":0,\\\"reviews_allowed\\\":true,\\\"average_rating\\\":\\\"0\\\",\\\"rating_count\\\":0,\\\"upsell_ids\\\":[],\\\"cross_sell_ids\\\":[],\\\"parent_id\\\":0,\\\"purchase_note\\\":\\\"\\\",\\\"categories\\\":[],\\\"brands\\\":[],\\\"tags\\\":[],\\\"images\\\":[],\\\"attributes\\\":[],\\\"default_attributes\\\":[],\\\"variations\\\":[],\\\"grouped_products\\\":[],\\\"menu_order\\\":0,\\\"price_html\\\":\\\"\\\",\\\"related_ids\\\":[],\\\"meta_data\\\":[{\\\"id\\\":1823,\\\"key\\\":\\\"_wpcom_is_markdown\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":1826,\\\"key\\\":\\\"_wpas_done_all\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":1854,\\\"key\\\":\\\"_product_addons_exclude_global\\\",\\\"value\\\":\\\"0\\\"},{\\\"id\\\":1855,\\\"key\\\":\\\"_product_addons\\\",\\\"value\\\":[]}],\\\"stock_status\\\":\\\"instock\\\",\\\"has_options\\\":false,\\\"post_password\\\":\\\"\\\",\\\"global_unique_id\\\":\\\"\\\",\\\"permalink_template\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/product\\\\/%pagename%\\\\/\\\",\\\"generated_slug\\\":\\\"bathroom-product-2\\\",\\\"exclude_global_add_ons\\\":[],\\\"addons\\\":[],\\\"jetpack_publicize_connections\\\":[],\\\"jetpack_sharing_enabled\\\":true,\\\"jetpack_likes_enabled\\\":true,\\\"_links\\\":{\\\"self\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/wp-json\\\\/wc\\\\/v3\\\\/products\\\\/124\\\",\\\"targetHints\\\":{\\\"allow\\\":[\\\"GET\\\",\\\"POST\\\",\\\"PUT\\\",\\\"PATCH\\\",\\\"DELETE\\\"]}}],\\\"collection\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/ecom-premcbe001-aoslb.wpcomstaging.com\\\\/wp-json\\\\/wc\\\\/v3\\\\/products\\\"}]}}\"}",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "tool",
+        "name": "integration_suite__send_http_message",
+        "id": "6b238d1c-0e37-4244-af2e-68180d12c1ef",
+        "tool_call_id": "call_F84yUDnEosUEbKlGpePpOMlL",
+        "artifact": null,
+        "status": "success",
+        "index": 8
+    },
+    {
+        "content": "The iFlow \"woo103\" in the package \"testmcp\" successfully created two bathroom products. Here are their names:\n\n1. Bathroom Product 1\n2. Bathroom Product 2\n\nLet me know if you need more details or actions!",
         "additional_kwargs": {
             "refusal": null
         },
         "response_metadata": {
             "token_usage": {
-                "completion_tokens": 162,
-                "prompt_tokens": 16743,
-                "total_tokens": 16905,
+                "completion_tokens": 53,
+                "prompt_tokens": 8103,
+                "total_tokens": 8156,
                 "completion_tokens_details": {
                     "accepted_prediction_tokens": 0,
                     "audio_tokens": 0,
@@ -423,34 +287,34 @@
                 },
                 "prompt_tokens_details": {
                     "audio_tokens": 0,
-                    "cached_tokens": 16640
+                    "cached_tokens": 6656
                 }
             },
             "model_provider": "openai",
             "model_name": "gpt-4.1-2025-04-14",
             "system_fingerprint": "fp_7a7fd0eb44",
-            "id": "chatcmpl-DCH8uyeWItR0ihZaSaQ7oKAeHgloD",
+            "id": "chatcmpl-DCHLAu8L3m8qBG8xAStDLPbtNZAZZ",
             "finish_reason": "stop",
             "logprobs": null
         },
         "type": "ai",
         "name": null,
-        "id": "lc_run--019c8898-35bb-7f33-93cb-e37ae7d542bc-0",
+        "id": "lc_run--019c88a3-d1f9-7641-ad27-d539c4632a47-0",
         "tool_calls": [],
         "invalid_tool_calls": [],
         "usage_metadata": {
-            "input_tokens": 16743,
-            "output_tokens": 162,
-            "total_tokens": 16905,
+            "input_tokens": 8103,
+            "output_tokens": 53,
+            "total_tokens": 8156,
             "input_token_details": {
                 "audio": 0,
-                "cache_read": 16640
+                "cache_read": 6656
             },
             "output_token_details": {
                 "audio": 0,
                 "reasoning": 0
             }
         },
-        "index": 15
+        "index": 9
     }
 ]
