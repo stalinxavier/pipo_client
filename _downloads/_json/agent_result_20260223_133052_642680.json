@@ -1,0 +1,35 @@
+[
+    {
+        "content": "test the iflow \"woo103\" in the package \"testmcp\" by creating 2 bathroom products, list the names.\n\nRouting hint: This request best matches `integration_suite`. Use for iFlow and SAP Integration Suite design/creation/deployment tasks.",
+        "type": "human",
+        "index": 0
+    },
+    {
+        "content": "",
+        "type": "ai",
+        "tool_calls": [
+            {
+                "name": "integration_suite__get_iflow_endpoints",
+                "args": {
+                    "iflowId": "woo103"
+                },
+                "id": "call_CQ4GtAFyBNbIPWlSl7BuHFmH",
+                "type": "tool_call"
+            }
+        ],
+        "index": 1
+    },
+    {
+        "content": "{\"type\":\"success\",\"endpoints\":[{\"name\":\"woo103\",\"id\":\"woo103$endpointAddress=woo103\",\"title\":\"woo103\",\"version\":\"1.0.0\",\"summary\":\"woo103\",\"description\":\"woo103\",\"lastUpdated\":\"2026-02-19T06:41:56.556Z\",\"protocol\":\"REST\",\"entryPoints\":[],\"apiDefinitions\":[],\"URL\":\"https://hess-test-btdpygoi.it-cpi019-rt.cfapps.us10-002.hana.ondemand.com/http/woo103\"}]}",
+        "type": "tool",
+        "name": "integration_suite__get_iflow_endpoints",
+        "status": "success",
+        "index": 2
+    },
+    {
+        "content": "To test the iFlow \"woo103\" in the package \"testmcp\" by creating 2 bathroom products, please provide the payload format required by the iFlow for product creation (e.g., JSON structure, field names). \n\nIf you do not know the payload format, I can analyze the iFlow to generate a sample payload for bathroom products. Would you like me to proceed with payload analysis and creation?",
+        "type": "ai",
+        "tool_calls": [],
+        "index": 3
+    }
+]
