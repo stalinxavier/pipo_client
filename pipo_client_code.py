@@ -442,16 +442,23 @@ class MultiMCP:
         
         #################################
         
+        pretty_json = json.dumps(
+            structured_messages_2,
+            indent=4,
+            ensure_ascii=False
+        )
+
+        save_to_pdf(pretty_json)
+
+        #################################
+        
         final_msg = result["messages"][-1]
         answer_text = final_msg.content if hasattr(final_msg, "content") else str(final_msg)
         self.update_memory(query, answer_text)
         
-        result_str = str(answer_text)                                         #single pdf file save
-        save_to_pdf(result_str, filename="final_message.pdf")    
+        # result_str = str(answer_text)                                         #single pdf file save
+        # save_to_pdf(result_str, filename="final_message.pdf")    
 
-        
-          
- 
         return {
             "answer": answer_text,
             "steps": logger_cb.steps,
