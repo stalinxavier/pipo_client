@@ -128,12 +128,18 @@ def save_to_pdf(text: str, filename: str):
     pdf.output(filename)
     print(f"Saved PDF: {filename}")            
 
-def pdf_path() -> str:
+def pdf_and_json_path() -> str:
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    base_dir = os.path.join(project_root, "_downloads")
-    os.makedirs(base_dir, exist_ok=True)
+    pdf_base_dir = os.path.join(project_root, "_downloads", "_pdf")
+    json_base_dir = os.path.join(project_root, "_downloads", "_json")
+    
+    os.makedirs(pdf_base_dir, exist_ok=True)
+    os.makedirs(json_base_dir, exist_ok=True)
+    
     ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
     print(f"🐞 ts: {ts}")
 
-    dest_path = os.path.join(base_dir, f"agent_result_{ts}.pdf")
-    return os.path.normpath(dest_path)
+    pdf_dest_path = os.path.join(pdf_base_dir, f"agent_result_{ts}.pdf")
+    json_dest_path = os.path.join(json_base_dir, f"agent_result_{ts}.json")
+    
+    return os.path.normpath(pdf_dest_path), os.path.normpath(json_dest_path)
