@@ -20,7 +20,7 @@ from langchain_core.callbacks import BaseCallbackHandler
  
  
 from gen_ai_hub.proxy.langchain.openai import ChatOpenAI
-from file_ops import write_json,  save_clean_json, save_to_pdf, save_to_pdf_with_TAD, save_clean_pdf
+from _util.file_ops import write_json, save_to_pdf, pdf_path
  
  
 # --------------------------------------------------
@@ -448,7 +448,8 @@ class MultiMCP:
             ensure_ascii=False
         )
 
-        save_to_pdf(pretty_json)
+        full_path = pdf_path()
+        save_to_pdf(pretty_json, full_path)
 
         #################################
         
