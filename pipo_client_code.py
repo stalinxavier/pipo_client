@@ -20,7 +20,7 @@ from langchain_core.callbacks import BaseCallbackHandler
  
  
 from gen_ai_hub.proxy.langchain.openai import ChatOpenAI
-from file_ops import write_json,  save_clean_json, save_to_pdf, save_to_pdf_with_TAD, save_clean_pdf
+from _util.file_ops import write_json, save_to_pdf, pdf_path
  
  
 # --------------------------------------------------
@@ -365,30 +365,101 @@ class MultiMCP:
             {"messages": messages},
             config={"callbacks": [logger_cb]},
         )
-        save_clean_pdf(result)
-        # result_text = (
-        #     result.content if hasattr(result, "content") else
-        #     result["output"] if isinstance(result, dict) and "output" in result else
-        #     str(result)
-        # )
-        # save_to_pdf_with_TAD(result_text)
-
-
-        # result_str = str(result)                                         #single pdf file save
-        # save_to_pdf(result_str, filename="agent_result.pdf")
         
-        # save_clean_json(data = str(result), filename = "result2.json")    # for json file save    
- 
+        write_json(json_value = str(result), json_file_name = "pipo_client_code_response.json")
+        # print(type(response))
+        
+        agent_messages = result["messages"]
+
+        #################################
+        
+        structured_messages_1 = []
+
+        for idx, msg in enumerate(agent_messages):
+            msg_dict = msg.model_dump()  # includes EVERYTHING
+            msg_dict["index"] = idx
+            # msg_dict["message_type"] = msg.__class__.__name__
+            print("------------", f"{type(msg_dict)}")
+            print("------------", f"{len(msg_dict)}")
+
+            structured_messages_1.append(msg_dict)
+        
+        write_json(json_value = structured_messages_1, json_file_name = "pipo_client_code_parsed_1.json")
+        
+        #################################
+        
+        structured_messages_2 = []
+
+        HUMAN_UNWANTED = {
+            "additional_kwargs",
+            "response_metadata",
+            "id",
+            "name"
+        }
+
+        AI_UNWANTED = {
+            "additional_kwargs",
+            "response_metadata",
+            "usage_metadata",
+            "id",
+            "invalid_tool_calls",
+            "name"
+        }
+
+        TOOL_UNWANTED = {
+            "additional_kwargs",
+            "response_metadata",
+            "tool_call_id",
+            "artifact",
+            "id"
+        }
+
+        for idx, msg in enumerate(agent_messages):
+            msg_dict = msg.model_dump()
+            msg_type = msg_dict.get("type")
+
+            if msg_type == "human":
+                unwanted = HUMAN_UNWANTED
+            elif msg_type == "ai":
+                unwanted = AI_UNWANTED
+            elif msg_type == "tool":
+                unwanted = TOOL_UNWANTED
+            else:
+                unwanted = set()
+
+            # Remove unwanted keys
+            for key in unwanted:
+                msg_dict.pop(key, None)
+
+            # Remove empty values
+            # msg_dict = {k: v for k, v in msg_dict.items() if v not in (None, [], {})}
+
+            msg_dict["index"] = idx
+
+            structured_messages_2.append(msg_dict)
+
+        write_json(json_value = structured_messages_2, json_file_name = "pipo_client_code_parsed_2.json")
+        
+        #################################
+        
+        pretty_json = json.dumps(
+            structured_messages_2,
+            indent=4,
+            ensure_ascii=False
+        )
+
+        full_path = pdf_path()
+        save_to_pdf(pretty_json, full_path)
+
+        #################################
+        
         final_msg = result["messages"][-1]
         answer_text = final_msg.content if hasattr(final_msg, "content") else str(final_msg)
         self.update_memory(query, answer_text)
         
-        result_str = str(answer_text)                                         #single pdf file save
-        save_to_pdf(result_str, filename="final_message.pdf")    
+        # result_str = str(answer_text)                                         #single pdf file save
+        # save_to_pdf(result_str, filename="final_message.pdf")    
 
-        
-          
- 
         return {
             "answer": answer_text,
             "steps": logger_cb.steps,
