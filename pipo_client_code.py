@@ -20,7 +20,7 @@ from langchain_core.callbacks import BaseCallbackHandler
  
  
 from gen_ai_hub.proxy.langchain.openai import ChatOpenAI
-from _util.file_ops import write_json, save_to_pdf, pdf_path
+from _util.file_ops import write_json, save_to_pdf, pdf_and_json_path
  
  
 # --------------------------------------------------
@@ -448,9 +448,10 @@ class MultiMCP:
             ensure_ascii=False
         )
 
-        full_path = pdf_path()
-        save_to_pdf(pretty_json, full_path)
-
+        pdf_path, json_path = pdf_and_json_path()
+        save_to_pdf(pretty_json, pdf_path)
+        write_json(json_value = structured_messages_2, json_file_name = json_path)
+        
         #################################
         
         final_msg = result["messages"][-1]
